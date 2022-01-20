@@ -1,0 +1,263 @@
+*{
+  margin: 0; 
+  padding: 0;
+  font-family:'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px; 
+  padding-top: 30px;
+}
+a{
+  display: block;
+    width: 80px;
+    height: 50px;
+    background: #e8eff0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid;
+  
+    line-height: 25px;
+    text-decoration: none;
+
+  
+}
+header{
+ 
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-inline: .4em;
+  padding-block: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: max-content;
+  gap:1.5em;
+  user-select: none;
+  }
+
+header>span{
+  cursor: pointer;
+  
+  
+}
+
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 50%;
+  flex-shrink: 1;
+}
+
+
+
+@media screen and (max-width:450px){
+ 
+  .wrapper{
+      position: relative;
+      height: 100%;
+  }
+  .wrapper::before{
+      content: 'Menu';
+      font-weight: 600;
+      height: 4em;
+      padding-inline: 1em;
+      display: flex;
+      align-items: center;
+      transition-duration: 300ms;
+  }
+  .wrapper:hover::before{
+      background-color:white;
+      transition-duration: 300ms;
+  }
+  .wrapper:hover .nav-items{
+      display: flex;
+  }
+  .nav-items{
+      flex-direction: column;
+      width: 7em;
+      background-color:white;
+      inset-block-start: 100%;
+      height: max-content;
+      box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+  }
+  .nav-item{
+      width: 100%;
+  }
+}
+
+.nav-item{
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: .7em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-item::before{
+  content: '';
+  background-color: #fff;
+  height: .35em;
+  width: 0;
+  inset-inline: 0;
+  inset-block-end: 0;
+  position: absolute;
+  transition-duration:300ms;
+  margin-inline: auto;
+}
+
+.nav-item:hover{
+  background-color:rgba(0,0,0,0.2);
+}
+
+.nav-item:hover::before{
+  width: 100%;
+  transition-duration:300ms ;
+}
+
+span{
+  
+  font: 100px 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: black;
+  color: white;
+}
+
+
+.cards{
+  margin-block: 2em;
+  margin-inline: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5em;  
+  justify-content: center;
+}
+
+.card{
+  display: inline-block;
+  width: 300px;
+  height: 370px;
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+}
+
+.card .name1{
+  text-transform: capitalize;
+  text-align: center;
+  color: red;
+  
+}
+.card .name{
+  text-transform: capitalize;
+  text-align: center;
+  
+}
+
+.card:hover{
+  background-color: rgba(153, 153, 153, 0.1);
+}
+.title{
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+input{
+  width: 20%;
+  height: 45px;
+  font-size: 30px;
+  margin: 30;
+  margin-left: 40%;
+  margin-top: 20px;
+}
+.logo{
+   width: 70px;
+   height: 75px;
+   border-radius: 50px;
+   display: block;
+ 
+}
+.photo{
+  width: 100%;
+  height: 150px;
+
+}
+
+.name{
+  
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+p{
+  color: blue;
+}
+
+.buttons-div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button{
+  width: 70px;
+  height: 50px;
+  border-radius: .5em;
+  border:1px solid #777;
+  font-weight: 600;
+  cursor:pointer;
+  transition-duration: 300ms;
+}
+
+button:hover{
+  opacity: .7;
+  transition-duration: 300ms;
+}
+
+#edit{
+  background-color: dodgerblue;
+  color: white;
+}
+
+#delete{
+  background-color: darkred;
+  color: white;
+}
+
+
+
+
+
+
+
